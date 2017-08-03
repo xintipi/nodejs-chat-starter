@@ -1,0 +1,29 @@
+extends ../home/home-layout
+
+block content
+
+    div.home
+        div.header
+            div.welcome-user
+                span Hello
+                div.home-navigation
+                    ul
+                        li(ng-click="logout()") Logout
+
+        div(class="row chat-body")
+            div.col-md-8
+                div.massege-wrapper
+                    div.massege-container
+                        div(*ngIf="selectedUserName" class="opposite-user") Chatting with ...
+
+                        ul.message-thread
+                            //li(*ngFor="let message of messages" [class.align-right]="alignMessage(message.toUserId)")
+
+                    div.message-typer
+                        textarea(class="message form-control" placeholder="Type and hit Enter" ng-model="message" ng-keyup= "sendMessage($event)")
+            div.col-md-4
+                div.user-list-wrapper
+                    ul.user-list
+                        //li(*ngFor="let user of chatListUsers" (click) = "selectedUser(user)" [class.selected - user] = "isUserSelected(user._id)")
+
+

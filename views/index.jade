@@ -1,0 +1,96 @@
+extends index-layout
+
+block content
+  nav.main-nav
+    ul
+      li
+        a(class="signin" href="#0") Sign in
+      li
+        a(class="signup" href="#0") Sign up
+
+  div.user-modal
+    div.user-modal-container
+      ul.switcher
+        li
+          a(href="#0") Sign in
+        li
+          a(href="#0") New account
+
+      div#login
+        form.form
+          p.fieldset
+            label(class="image-replace username" for="signup-username") Username
+            input(class="full-width has-padding has-border" id="signup-username" type="text" placeholder="Username" name="username" ng-model="form.username")
+
+          p.fieldset
+            label(class="image-replace password" for="signin-password") Password
+            input(class="full-width has-padding has-border" id="signin-password" type="password"  placeholder="Password" name="password" ng-model="form.password")
+            a(href="#0" class="hide-password") Show
+
+          p.fieldset
+            input(type="checkbox" id="remember-me" checked)
+            label(for="remember-me")  Remember me
+
+          p.fieldset
+            input(class="full-width" type="submit" value="Login" ng-click="login()")
+
+      div#signup
+        form.form
+          p.fieldset
+            label(class="image-replace username" for="signup-username") Username
+            input(class="full-width has-padding has-border" id="signup-username" type="text" placeholder="Username" name="username" ng-model='form.isUsernameSuggest' ng-keydown='usernameCheck()')
+            div(ng-hide='UI.isUsernameAvailable')
+              div(class="alert alert-danger") This username is not available
+
+          p.fieldset
+            label(class="image-replace password" for="signup-password") Password
+            input(class="full-width has-padding has-border" id="signup-password" type="password"  placeholder="Password" name="password" ng-model='form.registerPassword')
+            a(href="#0" class="hide-password") Show
+
+          p.fieldset
+            input(type="checkbox" id="accept-terms")
+            label(for="accept-terms")  I agree to the
+              a(class="accept-terms" href="#0") Terms
+
+          p.fieldset
+            input(class="full-width has-padding" type="submit" value="Create account" ng-click="register()")
+
+  //div.container
+  //  div.row
+  //    div(class="col-md-12 app-heading")
+  //      h1.text-center Showing online users using Nodejs and Socket.io
+  //    div(class="col-md-offset-3 col-md-6")
+  //      div.self-container
+  //        uib-tabset(active="active")
+  //
+  //          uib-tab(index="0" heading="Login")
+  //            div.tab-container
+  //
+  //              div.form-group
+  //                label Username:
+  //                input(type="text" name="username" class="form-control" ng-model='form.username')
+  //
+  //              div.form-group
+  //                label Password:
+  //                input(type="text" name="password" class="form-control" ng-model='form.password')
+  //
+  //              div.form-group
+  //                button(class="btn btn-primary" ng-click="login()") Login
+  //
+  //          uib-tab(index="1" heading="Registration")
+  //            div.tab-container
+  //
+  //              div.form-group
+  //                label Username:
+  //                input(type="text" name="username" class="form-control" ng-model='form.isUsernameSuggest' ng-keydown='usernameCheck()')
+  //                div(ng-hide='UI.isUsernameAvailable')
+  //                  br
+  //                  div(class="alert alert-danger") This username is not available
+  //
+  //              div.form-group
+  //                label Password:
+  //                input(type="text" name="password"  ng-model='form.registerPassword' class="form-control")
+  //
+  //              div.form-group
+  //                button(class="btn btn-primary"  ng-click="register()") Register
+

@@ -1,0 +1,32 @@
+doctype html
+html(ng-app="app"  ng-controller="home")
+    head
+        title= title
+        link(rel='stylesheet', href='/css/home.css')
+        link(rel='stylesheet', href='/css/bootstrap.min.css')
+        style.
+            .home-navigation a:hover {
+                background: #fff;
+                color: #d83d3d;
+            }
+
+            .home-navigation a {
+                display: block;
+                height: 50px;
+                padding: 2px 25px;
+                text-decoration: none;
+                border-radius: 30px;
+                line-height: 45px;
+                color: #FFF;
+                -webkit-transition: all 0.30s ease-in-out;
+                -moz-transition: all 0.30s ease-in-out;
+                -ms-transition: all 0.30s ease-in-out;
+                -o-transition: all 0.30s ease-in-out;
+            }
+    body
+        block content
+    script(src='/socket.io/socket.io.js')
+    script(src='/js/angular.min.js')
+    script(src='/js/service.js')
+    script(src='/js/script.js')
+

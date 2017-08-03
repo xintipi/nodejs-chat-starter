@@ -1,0 +1,28 @@
+extends home-layout
+
+block content
+    div.home
+        div.header
+            div.welcome-user
+                span Xin chào {{UI.username}}
+                div.home-navigation
+                    a(href='/logout' style="text-decoration: none") Đăng xuất
+
+        div(class="row chat-body")
+            div.col-md-8
+                div.massege-wrapper
+                    div.massege-container
+                        div(*ngIf="selectedUserName" class="opposite-user") Đang nói chuyện với {{UI.selectedUserName}}
+
+                        ul.message-thread
+                            li(ng-repeat="message in UI.messages" ng-class="alignMessage(message.toUserId) == false ? 'align-right' : ''") {{message.message}}
+                                br
+                                span(class="time") Đã gửi lúc: {{message.time}}
+
+                    div.message-typer
+                        textarea(class="message form-control" placeholder="Nội dung cần gửi" ng-model="message" ng-keyup="sendMessage($event)")
+            div.col-md-4
+                div.user-list-wrapper
+                    ul.user-list
+                        li(class="alert_message" title="Tài khoản đang {{result.online == 'Y' ? 'online': 'offline'}}" ng-repeat="result in UI.results" ng-click="selectedUser(result)" ng-class="isUserSelected(result._id) == true ? 'selected-user' : ''") {{result.username}}
+                            span(class="contact-status" ng-class="result.online == 'Y' ? 'online': 'offline'")

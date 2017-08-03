@@ -1,0 +1,153 @@
+.header{
+    background-color: rgba(80, 208, 193, 0.51);
+    margin-bottom: 5px;
+    box-shadow: 0px 1px 10px 1px rgba(0, 0, 0, 0.32);
+}
+
+.welcome-user{
+    padding: 25px;
+    color: #444444;
+}
+
+.welcome-user span{
+    font-size: 30px;
+}
+
+.home-navigation {
+    float: right;
+}
+
+.home-navigation ul{
+    display: inline-flex;
+    list-style-type: none;
+}
+
+
+.chat-body{
+    width: 100%;
+    padding: 10px;
+}
+
+.massege-container{
+    background-color: rgba(80, 208, 193, 0.51);
+}
+
+.opposite-user{
+    background-color: rgba(0, 0, 0, 0.54);
+    width: 100%;
+    color: #fff;
+    text-align: center;
+}
+.message-thread{
+    overflow-y: scroll;
+    list-style-type: none;
+    height: 400px;
+    width: 100%;
+    border: solid 1px #BDBDBD;
+    margin: 0px !important;
+    padding: 5px !important;
+}
+
+.message-thread li{
+    max-width: 300px;
+    border-color: solid 0.5px rgba(0, 0, 0, 0.32);
+    clear: both;
+    text-decoration: none;
+    list-style-type: none;
+    margin: 20px 10px 0px 20px;
+    float: left;
+    display: inline-block;
+    margin-right: 20px;
+    padding: 25px 34px;
+    min-width: 160px;
+    min-height: 10px;
+    max-width: 350px;
+    border-radius: 5px;
+    box-shadow: 0px 3px 3px rgba(172, 172, 172, 0.73);
+    background-color: rgba(255, 255, 255, 0.80);
+    line-height: 1.4;
+    word-wrap: break-word;
+    color: #444444;
+    text-align: left;
+}
+
+.align-right{
+    float: right !important;
+    text-align: right;
+}
+
+.message-typer{
+    padding-top: 20px;
+}
+
+
+.user-list{
+    padding: 10px;
+    overflow-y: scroll;
+    height: 423px;
+    width: 100%;
+    background-color: rgba(80, 208, 193, 0.51);
+}
+
+.user-list li{
+    background-color: rgba(255, 255, 255, 0.80);
+    padding: 20px;
+    list-style-type: none;
+    margin-bottom: 5px;
+    color: #444444;
+    width: 100% !important;
+    border-radius: 5px;
+    box-shadow: 0px 3px 3px rgba(172, 172, 172, 0.73);
+    line-height: 1.4;;
+    border-color: solid 0.5px rgba(0, 0, 0, 0.32);
+    clear: both;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.selected-user{
+    border-left: solid 3px rgb(2, 39, 35);
+}
+
+.overlay{
+    height: 100% !important;
+    width: 100% !important;
+    background-color: rgba(255, 255, 255, 0.82);
+    position: absolute;
+    z-index: 1;
+    text-align: center;
+    padding-top: 200px;
+}
+
+.overlay-display{
+    display: none;
+}
+
+span.contact-status {
+    border-radius: 50%;
+    display: inline-block;
+    height: 6px;
+    margin-left: 4px;
+    width: 6px;
+}
+
+.online {
+    background: rgb(66, 183, 42);
+}
+
+.offline {
+    background: red;
+}
+
+span._1ht7 {
+    color: rgba(0, 0, 0, .40);
+    font-size: 13px;
+    font-weight: 400;
+    padding-top: 4px;
+    margin-left: 220px;
+}
+
+.time{
+    font-size:10px;
+    opacity: 0.8;
+}
